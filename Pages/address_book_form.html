@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo.png">
+    <link rel="stylesheet" href="../css/form_style.css">
+    <title>Address Book Form</title>
+</head>
+
+<body>
+    <header class="headerContainer header">
+        <div class="logoContainer">
+            <img src="../assets/images/logo.png" alt="">
+            <div>
+                <span class="address-text">ADDRESS</span><br>
+                <span class="address-text book-text">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
+            <div class="form-head">
+                <div class="form-text">Person Address Form</div>
+                <div>
+                    <a href="../pages/home.html"><img class="cancel-img" src="../assets/images/cross.png" alt=""></a>
+                </div>
+            </div>
+            <div class="row-content">
+                <label for="full-name" class="label text">Full Name</label>
+                <div class="validity-check">
+                    <input class="input" type="text" id="full-name" name="full-name" required>
+                    <valid-message class="valid-full-name" for="full-name"></valid-message>
+                    <error-output class="full-name-error" for="full-name"></error-output>
+                </div>
+            </div>
+            <div class="row-content">
+                <label for="tel" class="label text">Phone Number</label>
+                <div class="validity-check">
+                    <input class="input" type="tel" id="tel" name="tel">
+                    <valid-message class="valid-tel" for="tel"></valid-message>
+                    <error-output class="tel-error" for="tel"></error-output>
+                </div>
+            </div>
+            <div class="row-content">
+                <label for="address" class="label text">Address</label>
+                <div class="validity-check">
+                    <textarea class="input text" name="address" id="address" style="height: 100px;"></textarea>
+                    <valid-message class="valid-address" for="address"></valid-message>
+                    <error-output class="address-error" for="address"></error-output>
+                </div>
+            </div>
+            <div class="select-elements">
+                <div name="select-city" id="select-city" class="select-div">
+                    <label for="city" class="label text">City</label>
+                    <select name="city" id="city">
+                      <option value="" disabled selected hidden>Select City</option>
+                      <option value="Bengaluru">Bengaluru</option>
+                      <option value="Mysuru">Mysuru</option>
+                      <option value="=Mandya">Hyderabad</option>
+                      <option value="=Mandya">Noeda</option>
+                      <option value="=Mandya">Bhubneswar</option>
+                      <option value="=Mandya">Pune</option>
+                      <option value="=Mandya">Nagpur</option>
+                      <option value="=Mandya">Chennai/option>
+                    </select>
+                </div>
+                <div name="select-state" id="select-state" class="select-div">
+                    <label for="state" class="label text">State</label>
+                    <select name="state" id="state">
+                      <option value="" disabled selected hidden>Select State</option>
+                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                      <option value="Maharashtra">Maharashtra</option>
+                      <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  </select>
+                </div>
+                <div name="select-zip" id="select-zip" class="select-div">
+                    <label for="zip" class="label text">Zip Code</label>
+                    <select name="zip" id="zip">
+                      <option value="" disabled selected hidden>Select Zip Code</option>
+                      <option value="226022">226022</option>
+                      <option value="482005">482005</option>
+                      <option value="482005">482006</option>
+                      <option value="482005">482007</option>
+                      <option value="440026">440026</option>
+                      <option value="366021">366028</option>
+                  </select>
+                </div>
+            </div>
+            <div class="buttonParent">
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton">Add</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../js/contact_data.js"></script>
+    <script src="../js/form_script.js"></script>
+    <script src="../js/site_properties_script.js"></script>
+</body>
+
+</html>
